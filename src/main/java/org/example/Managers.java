@@ -19,6 +19,6 @@ public class Managers extends Employee{
         if (employee.getPosition().equals("Manager"))
             return;
         averageSalaries = employee.getSalary();
-        employee.setSalary(averageSalaries.add(averageSalaries.divide(BigDecimal.valueOf(10))));
+        employee.setSalary(averageSalaries.add(BigDecimal.valueOf(value)));
     }
 }

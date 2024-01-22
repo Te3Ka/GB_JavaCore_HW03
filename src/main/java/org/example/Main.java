@@ -53,24 +53,20 @@ public class Main {
         for (Employee employee : employees) {
             employee.printInfo();
         }
-
-        salaryIncreaseForEmployees(employees, 45, 30_000);
         System.out.println();
 
-        for (Employee employee : employees) {
-            employee.printInfo();
-        }
-
-
         System.out.println(getAverage(employees));
-
 
         // Задание № 1
         System.out.println(Comparator(employee_00.getBirthdate(), employee_01.getBirthdate()));
         System.out.println(Comparator(employee_01.getBirthdate(), employee_00.getBirthdate()));
 
         // Задание № 2
-        System.out.println(getAverageSalaryAndAge(employees));
+        salaryIncreaseForEmployees(employees, 20, 20_000);
+        System.out.println("\n\n" + "*".repeat(30));
+        for (Employee employee : employees) {
+            employee.printInfo();
+        }
     }
 
     public static void salaryIncreaseForEmployees(List<Employee> employees, int ageOlder, int bonusValue) {
